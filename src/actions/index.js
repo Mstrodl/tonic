@@ -32,7 +32,7 @@ export const RECEIVE_ITEM_ADD = 'RECEIVE_ITEM_ADD';
 export const REQUEST_SLOT_ACTIVE = 'REQUEST_SLOT_ACTIVE';
 export const RECEIVE_SLOT_ACTIVE = 'RECEIVE_SLOT_ACTIVE';
 
-const SERVER_ADDRESS = 'https://drink.csh.rit.edu';
+const SERVER_ADDRESS = localStorage.getItem('SERVER_ADDRESS') || 'https://drink.csh.rit.edu';
 
 function GET(access_token, route) {
     return fetch(SERVER_ADDRESS + route, {
